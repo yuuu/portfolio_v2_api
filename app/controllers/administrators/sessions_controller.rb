@@ -11,7 +11,6 @@ class Administrators::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    binding.irb
     super
   end
 
