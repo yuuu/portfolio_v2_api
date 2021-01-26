@@ -116,7 +116,7 @@ Rails.application.configure do
   # cors
   config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins 'https://vercel.com/yuuu/portfolio-v2-ui'
+      origins 'vercel.com'
       resource '*',
                headers: :any,
                methods: %i[get post put patch delete options head],
