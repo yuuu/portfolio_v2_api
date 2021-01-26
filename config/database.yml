@@ -35,6 +35,7 @@ test:
 
 production:
   <<: *default
-  database: portfolio_v2_api_production
-  username: portfolio_v2_api
+  database: <%= ENV['PORTFOLIO_V2_API_DATABASE_DATABASE'] %>
+  username: <%= ENV['PORTFOLIO_V2_API_DATABASE_USER'] %>
   password: <%= ENV['PORTFOLIO_V2_API_DATABASE_PASSWORD'] %>
+  password: <%= ENV['PORTFOLIO_V2_API_DATABASE_HOST'] %>

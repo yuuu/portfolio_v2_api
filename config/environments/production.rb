@@ -112,4 +112,18 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
+
+  # cors
+  config.middleware.insert_before 0, Rack::Cors do
+    allow do
+      origins 'https://vercel.com/yuuu/portfolio-v2-ui'
+      resource '*',
+               headers: :any,
+               methods: %i[get post put patch delete options head],
+               credentials: true
+    end
+  end
+
+  # devise
+  config.action_mailer.default_url_options = { host: 'yuuu-portfolio-v2-api.herokuapp.com' }
 end
