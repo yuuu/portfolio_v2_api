@@ -46,3 +46,5 @@ gem 'devise', '~> 4.7'
 gem 'rubocop', '~> 1.8'
 
 gem 'rubocop-rails', '~> 2.9'
+
+gem "rails_same_site_cookie", "~> 0.1.8"
