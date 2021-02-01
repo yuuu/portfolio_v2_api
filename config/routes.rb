@@ -8,5 +8,8 @@ Rails.application.routes.draw do
     get "sign_in", :to => "administrators/sessions#new"
     get "sign_out", :to => "administrators/sessions#destroy" 
   end
-  get '/admin/me', to: 'administrators#me'
+  get '/administrators/me', to: 'administrators#me'
+  namespace :administrators do
+    resources :profiles, only: [:show, :update]
+  end
 end
