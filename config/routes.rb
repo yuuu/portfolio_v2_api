@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :profiles, only: [:show]
+  resources :articles
+  resources :profiles
 
   devise_for :administrators, :controllers => {
     :sessions => 'administrators/sessions'   
@@ -11,7 +12,4 @@ Rails.application.routes.draw do
     get "sign_out", :to => "administrators/sessions#destroy" 
   end
   get '/administrators/me', to: 'administrators#me'
-  namespace :administrators do
-    resources :profiles, only: [:show, :update]
-  end
 end
