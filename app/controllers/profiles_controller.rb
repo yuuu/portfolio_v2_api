@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
     @profile.assign_attributes(profile_params)
 
     if @profile.save
-      render :show, status: :ok, location: administrators_profile_url(@profile, format: :json)
+      render :show, status: :ok, location: @profile
     else
       render json: @profile.errors, status: :unprocessable_entity
     end
