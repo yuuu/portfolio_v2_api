@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.all.order(published_at: :desc)
   end
 
   # GET /articles/1
@@ -50,6 +50,6 @@ class ArticlesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def article_params
       params[:article][:published_at] = params[:publishedAt]
-      params.fetch(:article, {}).permit(:title, :body, :image, :published_at)
+      params.fetch(:article, {}).permit(:title, :body, :image, :published_at, :link)
     end
 end
