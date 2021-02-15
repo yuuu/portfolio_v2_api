@@ -36,3 +36,19 @@ Article.create!(
   published_at: Time.zone.parse('2021-2-9'),
   link: 'https://zenn.dev/y_uuu/articles/95d7071992d662',
 )
+
+Slide.create!(
+  title: '現代版・ポケベルを支える技術 - SORACOM UG Explorer 2020 LT',
+  body: 'SORACOM UG Explorer 2020 ライトニングトーク 2020年12月19日(土) 16:50〜 現代版・ポケベルを支える技術 ポケベル製作を通じて得られた技術的知見をまとめたLTです。 https://qiita.com/Y_uuu/items/9c781f269167d73ee262',
+  image: 'https://files.speakerdeck.com/presentations/eae7b1eed72e4fad858711c94ede501a/slide_0.jpg?16953210',
+  published_at: Time.zone.parse('2020-12-19'),
+  link: 'https://speakerdeck.com/yuuu/xian-dai-ban-pokeberuwozhi-eruji-shu-soracom-ug-explorer-2020-lt',
+)
+
+Slide.create!(
+  title: 'AWS AmplifyとmockmockでIoTバックエンドをスピーディに構築する',
+  body: 'Serverless Meetup Japan Virtual #7 での登壇資料です https://serverless.connpass.com/event/188880/',
+  image: 'https://files.speakerdeck.com/presentations/d804fbbbc06344038ef14af969d2bb7b/slide_0.jpg?16431104',
+  published_at: Time.zone.parse('2020-10-07'),
+  link: 'https://speakerdeck.com/yuuu/aws-amplifytomockmockdeiotbatukuendowosupideinigou-zhu-suru',
+)
