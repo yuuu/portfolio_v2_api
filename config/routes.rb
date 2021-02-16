@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :slides
   resources :articles
   resources :profiles
+  resources :images, only: [:create]
 
   devise_for :administrators, :controllers => {
     :sessions => 'administrators/sessions'   

@@ -20,6 +20,7 @@ require 'action_cable/engine'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+Dotenv::Railtie.load
 
 module PortfolioV2Api
   class Application < Rails::Application
