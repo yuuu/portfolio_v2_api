@@ -4,8 +4,8 @@ class Image
    credentials: Aws::Credentials.new(ENV['AWS_ACCESS_KEY_ID'], ENV['AWS_SECRET_ACCESS_KEY'])
   )
 
-  def self.signed_url(filename)
+  def self.signed_url(filename, operation)
     signer = Aws::S3::Presigner.new
-    signer.presigned_url(:put_object, bucket: ENV['S3_BUCKET_NAME'], key: filename)
+    signer.presigned_url(operation, bucket: ENV['S3_BUCKET_NAME'], key: filename)
   end
 end

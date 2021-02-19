@@ -1,1 +1,2 @@
-json.signed_url @signed_url
+json.signedUrl @signed_url
+json.key @key
