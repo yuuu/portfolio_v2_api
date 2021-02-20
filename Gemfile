@@ -52,3 +52,5 @@ gem "rails_same_site_cookie", "~> 0.1.8"
 gem "aws-sdk-s3", "~> 1.88"
 
 gem "dotenv-rails", "~> 2.7"
+
+gem "faraday", "~> 1.3"
