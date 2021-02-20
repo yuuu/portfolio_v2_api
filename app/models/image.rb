@@ -6,6 +6,6 @@ class Image
 
   def self.signed_url(filename, operation)
     signer = Aws::S3::Presigner.new
-    signer.presigned_url(operation, bucket: ENV['S3_BUCKET_NAME'], key: filename)
+    signer.presigned_url(operation, bucket: ENV['S3_BUCKET_NAME'], key: filename, expires_in: 604800)
   end
 end
