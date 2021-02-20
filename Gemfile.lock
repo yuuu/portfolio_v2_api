@@ -181,6 +181,8 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.4)
+    rss (0.2.9)
+      rexml
     rubocop (1.8.1)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
@@ -237,6 +239,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 6.1.0)
   rails_same_site_cookie (~> 0.1.8)
+  rss (~> 0.2.9)
   rubocop (~> 1.8)
   rubocop-rails (~> 2.9)
   spring

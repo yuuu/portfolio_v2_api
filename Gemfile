@@ -54,3 +54,5 @@ gem "aws-sdk-s3", "~> 1.88"
 gem "dotenv-rails", "~> 2.7"
 
 gem "faraday", "~> 1.3"
+
+gem "rss", "~> 0.2.9"
