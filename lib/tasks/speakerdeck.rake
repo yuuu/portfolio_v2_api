@@ -9,7 +9,7 @@ namespace :speakerdeck do
       next if Slide.find_by(link: entry.link.href).present?
 
       entry_res = Faraday.get(entry.link.href)
-      next if res.status != 200
+      next if entry_res.status != 200
 
       doc = Nokogiri::HTML.parse(entry_res.body, entry_res.headers['charset'])
       image = doc.css('//meta[property="og:image"]/@content').to_s
