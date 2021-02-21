@@ -8,4 +8,8 @@ class Image
     signer = Aws::S3::Presigner.new
     signer.presigned_url(operation, bucket: ENV['S3_BUCKET_NAME'], key: filename, expires_in: 604800)
   end
+
+  def self.cdn_url(filename)
+    "#{ENV['CLOUDFRONT_ORIGIN']}/#{filename}"
+  end
 end
