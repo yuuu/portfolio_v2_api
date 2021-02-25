@@ -1,24 +1,22 @@
-# README
+# yuuu's portfolio API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend of my own portfolio site.
 
-Things you may want to cover:
+[screen shot](https://user-images.githubusercontent.com/8074640/109219568-1a7f9e80-77fb-11eb-869c-6e6b7124b5e2.png)
 
-* Ruby version
+Please refer to the following URL for the explanation article.
 
-* System dependencies
 
-* Configuration
+## How to use
 
-* Database creation
+```bash
+git clone https://github.com/yuuu/portfolio_v2_api
+cd portfolio_v2_api
 
-* Database initialization
+# edit your environment variable.
+vi .env
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+bundle install
+rails db:migrate
+rails s
+```
