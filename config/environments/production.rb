@@ -125,5 +125,5 @@ Rails.application.configure do
   end
 
   # devise
-  config.action_mailer.default_url_options = { host: 'yuuu-portfolio-v2-api.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'mysite-yw60.onrender.com' }
 end
