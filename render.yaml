@@ -1,0 +1,26 @@
+databases:
+  - name: mysite
+    databaseName: mysite
+    user: mysite
+
+services:
+  - type: web
+    name: mysite
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: mysite
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: S3_BUCKET_NAME
+        sync: false
+      - key: CLOUDFRONT_ORIGIN
+        sync: false
